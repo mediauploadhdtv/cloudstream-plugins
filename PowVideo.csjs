@@ -1,26 +1,11 @@
-plugin({
-  name: "PowVideo",
-  authors: ["TuNombre"],
-  version: "1.0.0",
-  description: "Plugin PowVideo funcional",
-  main: "index.js"
-});
+ Película 1:
+- Título: Rápidos y Furiosos 9
+- Enlace: https://powcloub.org/puvy8eoczu7m
+- Imagen: https://media.themoviedb.org/t/p/w300_and_h450_bestv2/TX1T3c3CDBN0y8iDNvlQbtiA5Z.jpg
+- Calidad: HD
 
-registerExtractor({
-  domain: "powvideo.net",
-  async extract({ url, addSource }) {
-    const res = await fetch(url);
-    const html = await res.text();
-    const videoUrl = html.match(/sources:\s*\[\s*\{.*?file:\s*"(.*?)"/)?.[1];
-    if (videoUrl) {
-      addSource({
-        name: "PowVideo",
-        url: videoUrl,
-        quality: "HD",
-        format: "mp4",
-        isM3U8: videoUrl.endsWith(".m3u8")
-      });
-    }
-  }
-});
-
+Película 2:
+- Título: Spider-Man: No Way Home
+- Enlace: https://streamtape.com/v/xyz456
+- Imagen: https://image.tmdb.org/t/p/w500/xyz.jpg
+- Calidad: FullHD
