@@ -1,0 +1,12 @@
+{
+  "name": "Repositorio fácil",
+  "developer": "TuNombre",
+  "version": 1,
+  "plugins": [
+    {
+      "name": "PowVideo",
+      "version": "1.0.0",
+      "url": "https://.github.io/cloudstream-plugins/PowVideo.csjs"
+    }
+  ]
+}
