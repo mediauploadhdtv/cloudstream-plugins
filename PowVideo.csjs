@@ -1,11 +1,42 @@
- Película 1:
-- Título: Rápidos y Furiosos 9
-- Enlace: https://powcloub.org/puvy8eoczu7m
-- Imagen: https://media.themoviedb.org/t/p/w300_and_h450_bestv2/TX1T3c3CDBN0y8iDNvlQbtiA5Z.jpg
-- Calidad: HD
+ plugin({
+  name: "Mis Películas",
+  authors: ["TuNombre"],
+  version: "1.0.0",
+  description: "Plugin con películas personalizadas",
+  main: "index.js"
+});
 
-Película 2:
-- Título: Spider-Man: No Way Home
-- Enlace: https://streamtape.com/v/xyz456
-- Imagen: https://image.tmdb.org/t/p/w500/xyz.jpg
-- Calidad: FullHD
+registerContent({
+  id: "mis-peliculas",
+  name: "Películas Custom",
+  genres: ["Comedia"],
+  async search(query) {
+    return this.list().filter(x => x.name.toLowerCase().includes(query.toLowerCase()));
+  },
+  async list() {
+    return [
+      {
+        id: "la-que-se-avecina",
+        name: "La que se avecina",
+        poster: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/La_que_se_avecina_logo.svg/1200px-La_que_se_avecina_logo.svg.png",
+        type: "Movie"
+      }
+    ];
+  },
+  async load(id) {
+    const links = {
+      "la-que-se-avecina": [
+        {
+          name: "PowVideo",
+          url: "https://powcloub.org/puvy8eoczu7m", // Cambia esta URL por la real
+          quality: "HD",
+          isM3U8: false
+        }
+      ]
+    };
+    return {
+      type: "Movie",
+      streams: links[id] || []
+    };
+  }
+});
