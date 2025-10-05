@@ -1,12 +1,13 @@
 {
-  "name": "Repositorio fácil",
+  "name": "Repositorio Fácil",
   "developer": "TuNombre",
   "version": 1,
   "plugins": [
     {
-      "name": "PowVideo",
+      "name": "Mis Películas",
       "version": "1.0.0",
-      "url": "https://mediaupload.github.io/cloudstream-plugins/PowVideo.csjs"
+      "url": "https://TU_USUARIO.github.io/cloudstream-plugins/powvideo.csjs"
     }
   ]
 }
+
