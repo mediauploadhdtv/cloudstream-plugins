@@ -4,9 +4,9 @@
   "version": 1,
   "plugins": [
     {
-      "name": "Mis Películas",
+      "name": "mis peliculas",
       "version": "1.0.0",
-      "url": "https://TU_USUARIO.github.io/cloudstream-plugins/powvideo.csjs"
+      "url": "https://mediauploadhdtv.github.io/cloudstream-plugins/powvideo.csjs"
     }
   ]
 }
